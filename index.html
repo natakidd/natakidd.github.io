@@ -12,6 +12,8 @@
         button:hover {
             background-color: darkgreen;
         }
+        body {
+            background-color : pink;
         h1 {
             color: turquoise;
             height: 100px;
@@ -26,6 +28,30 @@
             border: 1px solid black;
             padding: 5px;
         }
+        #container {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            #container > div {
+                background-color: mistyrose;
+                font-size: 20px;
+                margin: 20px;
+                padding: 20px;
+                width: 200px;
+            }
+            #grid {
+                background-color: navy;
+                display: grid;
+                padding: 20px;
+                grid-column-gap: 10px;
+                grid-row-gap: 10px;
+                grid-template-columns: 100px 100px auto;
+            }
+            .grid-item {
+                background-color: oldlace;
+                font-size: 20px;
+                padding: 20px;
+            }
     </style>
     </head>
     <body>>
@@ -121,5 +147,31 @@
             <li>Ilagay ang kumulong tubig sa loob ng mug.</li>
             <li>Ibuhos sa toothbrush yung natirang onting tubig para hindi sayang</li>
         </ol>
+        <div id="container">
+            <div>1. Kaizokuni Orewanaru</div>
+            <div>2. Kaizokuni Orewanaru</div>
+            <div>3. Kaizokuni Orewanaru</div>
+            <div>4. Kaizokuni Orewanaru</div>
+            <div>5. Kaizokuni Orewanaru</div>
+            <div>6. Kaizokuni Orewanaru</div>
+            <div>7. Kaizokuni Orewanaru</div>
+            <div>8. Kaizokuni Orewanaru</div>
+            <div>9. Kaizokuni Orewanaru</div>
+            <div>10. Kaizokuni Orewanaru</div>
+            <div>11. Kaizokuni Orewanaru</div>
+            <div>12. Kaizokuni Orewanaru</div>
+        </div>
+
+        <div id="grid">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>
+            <div class="grid-item">7</div>
+            <div class="grid-item">8</div>
+            <div class="grid-item">9</div>
+        </div>
     </body>
 </html>
