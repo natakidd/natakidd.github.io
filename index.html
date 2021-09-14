@@ -1,28 +1,46 @@
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <title>HALUU</title>
         <style>
             body {
-                background-color: rgb(103, 141, 185);
-            }
-            h5 {
-                font-size: 50px;
+                background-color: rgb(230, 226, 16);
             }
         </style>
         <script>
             document.addEventListener('DOMContentLoaded', function() {
-             
-                document.querySelector('form').onsubmit = function() {
-                    const name = document.querySelector('#name').value;
-                    alert(`Hello, ${name}!`);
-                };
-
+           
+                // Change font to red
+                document.querySelector('#red').onclick = function() {
+                    document.querySelector('#hello').style.color = 'red';
+                }
+                // Change font to green
+                document.querySelector('#green').onclick = function() {
+                    document.querySelector('#hello').style.color = 'green';
+                }
+                // Change font to blue
+                document.querySelector('#blue').onclick = function() {
+                    document.querySelector('#hello').style.color = 'blue';
+                }
             });
+
+            document.addEventListener('DOMContentLoaded', function() {
+             
+             document.querySelector('form').onsubmit = function() {
+                 const name = document.querySelector('#name').value;
+                 alert(`Hello, ${name}!`);
+             };
+
+         });
         </script>
+ 
     </head>
     <body>
+        <h1 id="hello">Gagi!</h1>
+        <button id="red">Red</button>
+        <button id="green">Green</button>
+        <button id="blue">Blue</button>
+
         <h5>IDK WHAT I'M DOIIING</h5>
         <form>
             <input autofocus id="name" placeholder="Name" type="text">
