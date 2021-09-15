@@ -18,13 +18,13 @@
                 
             document.addEventListener('DOMContentLoaded', function() {
              
-             document.querySelector('form').onsubmit = function() {
+             document.querySelector('#weh').onsubmit = function() {
                  const name = document.querySelector('#name').value;
                  alert(`Hello, ${name}!`);
              };
                 
              document.addEventListener('DOMContentLoaded', function() {
-                document.querySelector('form').onsubmit = () => {
+                document.querySelector('#wah').onsubmit = () => {
                     const task = document.querySelector('#task').value; 
 
                     const li = document.createElement('li');
@@ -51,14 +51,14 @@
         <button data-color="pink">Pink</button>
 
         <h1>IDK WHAT I'M DOIIING</h1>
-        <form>
-            <input autofocus id="name" placeholder="Name" type="text">
+        <form id="weh">
+            <input id="name" placeholder="Name" type="text">
             <input type="submit">
         </form>
         
         <h1>Listahan</h1>
         <ul id="tasks"><ul>
-        <form>
+        <form id="wah">
         <input id="task" placeholder="Bawal Magtype dito" type="text">
         <input type="submit">
         </form>
