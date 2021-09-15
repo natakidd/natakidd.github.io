@@ -22,8 +22,23 @@
                  const name = document.querySelector('#name').value;
                  alert(`Hello, ${name}!`);
              };
+                
+             document.addEventListener('DOMContentLoaded', function() {
+                document.querySelector('form').onsubmit = () => {
+                    const task = document.querySelector('#task').value; 
 
-         });
+                    const li = document.createElement('li');
+                    li.innerHTML = task;
+
+                    document.querySelector('#tasks').append(li);
+
+                    document.querySelector('#task').value = '';
+
+                    // Stop form from submitting
+                    return false; 
+                }
+            });
+
         </script>
  
     </head>
@@ -39,6 +54,13 @@
         <form>
             <input autofocus id="name" placeholder="Name" type="text">
             <input type="submit">
+        </form>
+        
+        <h1>Listahan</h1>
+        <ul id="tasks"><ul>
+        <form>
+        <input id="task" placeholder="Bawal Magtype dito" type="text">
+        <input type="submit">
         </form>
     </body>
 </html>
