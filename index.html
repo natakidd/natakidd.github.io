@@ -4,41 +4,27 @@
         <title>HALUU</title>
         <style>
             body {
-                background-color: rgb(230, 226, 16);
+                background-color: rgb(72, 182, 197);
             }
         </style>
         <script>
             document.addEventListener('DOMContentLoaded', function() {
-            document.querySelectorAll('button').forEach(function(button) {
+           
+                document.querySelectorAll('button').forEach(function(button) {
                     button.onclick = function() {
                         document.querySelector('#hello').style.color = button.dataset.color;
                     }
                 });
             });
-                
+
             document.addEventListener('DOMContentLoaded', function() {
              
-             document.querySelector('#weh').onsubmit = function() {
+             document.querySelector('form').onsubmit = function() {
                  const name = document.querySelector('#name').value;
                  alert(`Hello, ${name}!`);
              };
-                
-             document.addEventListener('DOMContentLoaded', function() {
-                document.querySelector('#wah').onsubmit = () => {
-                    const task = document.querySelector('#task').value; 
 
-                    const li = document.createElement('li');
-                    li.innerHTML = task;
-
-                    document.querySelector('#tasks').append(li);
-
-                    document.querySelector('#task').value = '';
-
-                    // Stop form from submitting
-                    return false; 
-                }
-            });
-
+         });
         </script>
  
     </head>
@@ -50,17 +36,10 @@
         <button data-color="black">Black</button>
         <button data-color="pink">Pink</button>
 
-        <h1>IDK WHAT I'M DOIIING</h1>
-        <form id="weh">
-            <input id="name" placeholder="Name" type="text">
+        <h5>IDK WHAT I'M DOIIING</h5>
+        <form>
+            <input autofocus id="name" placeholder="Name" type="text">
             <input type="submit">
-        </form>
-        
-        <h1>Listahan</h1>
-        <ul id="tasks"><ul>
-        <form id="wah">
-        <input id="task" placeholder="Bawal Magtype dito" type="text">
-        <input type="submit">
         </form>
     </body>
 </html>
